@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="startScreen" class="screen">
+            <h1>Welcome to the Quiz!</h1>
+            <p>Test your knowledge with this fun quiz.</p>
+            <button id="startBtn" class="btn btn-primary">Start Quiz</button>
+        </div>
+
+        <div id="quizScreen" class="screen hidden">
+            <div class="quiz-header">
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <div class="quiz-info">
+                    <span id="questionCount" class="question-count">Question 1/10</span>
+                    <span id="timer" class="timer">Time: 60s</span>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <h2 id="questionText" class="question-text"></h2>
+                <div id="optionsContainer" class="options-container"></div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="nextBtn" class="btn btn-next">Next Question</button>
+            </div>
+        </div>
+
+        <div id="resultsScreen" class="screen hidden">
+            <h1>Quiz Completed!</h1>
+            <div class="score-container">
+                <div class="score-circle">
+                    <span id="finalScore" class="score">0</span>
+                    <span class="score-label">/10</span>
+                </div>
+                <p id="scoreMessage" class="score-message"></p>
+            </div>
+            <div class="results-details">
+                <p>Correct answers: <span id="correctAnswers">0</span></p>
+                <p>Wrong answers: <span id="wrongAnswers">0</span></p>
+                <p>Time taken: <span id="timeTaken">0s</span></p>
+            </div>
+            <div class="action-buttons">
+                <button id="restartBtn" class="btn btn-primary">Restart Quiz</button>
+                <button id="reviewBtn" class="btn btn-secondary">Review Answers</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
